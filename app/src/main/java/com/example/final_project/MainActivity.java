@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         customerButton = findViewById(R.id.customerButton_id);
         shopButton = findViewById(R.id.shopButton_id);
+        // this is a comment.
 
 
         //Shopkeeper Button Work
