@@ -13,8 +13,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Qr_Br_CodeResult"></activity>
         <activity android:name=".Qr_Br_Code" />
-        <activity android:name=".customer_verification" />
-        <activity android:name=".shopkeeper_registration" />
+        <activity android:name=".CustomerVerification" />
+        <activity android:name=".ShopkeeperRegistration" />
         <activity android:name=".ShopKepeerLoginActivity" />
         <activity android:name=".MainActivity"
              android:screenOrientation="fullSensor">

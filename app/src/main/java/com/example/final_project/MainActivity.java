@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         shopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Thank you,Be with us",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"Thank you,Be with us",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(MainActivity.this,ShopKepeerLoginActivity.class);
                 //intent.putExtra();
                 startActivity(intent);
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         customerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Thank you",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this,customer_verification.class);
+//                Toast.makeText(MainActivity.this,"Thank you",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, CustomerVerification.class);
                 //intent.putExtra()
                 startActivity(intent);
             }

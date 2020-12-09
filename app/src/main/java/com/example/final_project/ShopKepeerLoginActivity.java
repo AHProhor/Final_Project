@@ -24,7 +24,7 @@ public class ShopKepeerLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ShopKepeerLoginActivity.this,"Carefully fill up the form",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ShopKepeerLoginActivity.this,shopkeeper_registration.class);
+                Intent intent = new Intent(ShopKepeerLoginActivity.this, ShopkeeperRegistration.class);
                 //intent.putExtra();
                 startActivity(intent);
             }
