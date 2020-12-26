@@ -9,124 +9,131 @@
     tools:context=".ShopkeeperRegistration">
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/registration_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/shopkeeper_reg_activity"
-                    android:textColor="#F1E7E7"
-                    android:textSize="30sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/shopkeeper_reg_activity"
+                android:textColor="#F1E7E7"
+                android:textSize="30sp" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Shop Name"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="50"
-                    />
+            <EditText
+                android:id="@+id/shopeNameId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Shop Name"
+                android:maxLength="50"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Licanse Number"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="50"
-                    />
+            <EditText
+                android:id="@+id/licanseNumberId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Licanse Number"
+                android:maxLength="50"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Owner Name"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="50"
-                    />
+            <EditText
+                android:id="@+id/ownerNameId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Owner Name"
+                android:maxLength="50"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Phone Number"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="11"
-                    />
+            <EditText
+                android:id="@+id/phoneNumberId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Phone Number"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Gmail"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="50"
-                    />
+            <EditText
+                android:id="@+id/gmailId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Gmail"
+                android:maxLength="50"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="User Name"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="10"
-                    />
+            <EditText
+                android:id="@+id/passwordId"
+                android:layout_width="267sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:maxLength="10"
+                android:textAlignment="center"
+                android:textColor="#8B7777"
+                android:textColorHint="#8B7777" />
 
-                <EditText
-                    android:layout_width="267sp"
-                    android:layout_height="38sp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:hint="Password"
-                    android:textColorHint="#8B7777"
-                    android:textAlignment="center"
-                    android:textColor="#8B7777"
-                    android:maxLength="10"
-                    />
+            <Button
+                android:id="@+id/registrationOkId"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button"
+                android:text="ok"
+                android:textAlignment="center"
+                android:textColor="#DEDE25"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/button"
-                    android:text="ok"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#DEDE25"
-                    android:textAlignment="center"
-                    />
-
-            </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/verification_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/verify_mobile_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
 </LinearLayout>

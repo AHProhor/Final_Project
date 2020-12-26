@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.final_project">
 
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,13 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Qr_Br_CodeResult"></activity>
+        <activity android:name=".DecimalResult"></activity>
+        <activity android:name=".Qr_Br_CodeResult" />
         <activity android:name=".Qr_Br_Code" />
         <activity android:name=".CustomerVerification" />
         <activity android:name=".ShopkeeperRegistration" />
         <activity android:name=".ShopKepeerLoginActivity" />
-        <activity android:name=".MainActivity"
-             android:screenOrientation="fullSensor">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

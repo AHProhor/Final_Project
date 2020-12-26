@@ -10,8 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private Button customerButton,shopButton;
+    private Button customerButton, shopButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(MainActivity.this,"Thank you,Be with us",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(MainActivity.this,ShopKepeerLoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, ShopKepeerLoginActivity.class);
                 //intent.putExtra();
                 startActivity(intent);
             }
