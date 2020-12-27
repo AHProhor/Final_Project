@@ -23,16 +23,16 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/button"
+        android:layout_marginTop="90dp"
         android:hint="Enter Decimal Code"
-        android:shadowColor="#AF0E5F"
+        android:textColorHint="#FF807A7D"
+        android:shadowColor="#F6F2F4"
         android:shadowDx="5"
         android:shadowDy="3"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#FFFBFB"
-        android:textStyle="bold" />
+        android:textColor="#D2E336"
+        android:textStyle="normal" />
 
     <Button
         android:id="@+id/decimalCodeButton_id"
@@ -48,7 +48,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFBFB"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
 
         />
@@ -56,7 +56,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="20dp">
@@ -97,11 +97,12 @@
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:background="@drawable/button"
+        android:layout_marginTop="10dp"
         android:text="Qr/Br Code"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFBFB"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
 
         />

@@ -34,7 +34,7 @@
         android:textAllCaps="false"
         android:textAlignment="center"
         android:textColor="#FFFBFB"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:shadowDx="5"
         android:shadowDy="3"
@@ -53,7 +53,7 @@
         android:textAllCaps="false"
         android:textAlignment="center"
         android:textColor="#FFFBFB"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
 
         />

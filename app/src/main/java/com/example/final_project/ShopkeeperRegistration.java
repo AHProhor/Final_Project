@@ -110,6 +110,8 @@ public class ShopkeeperRegistration extends AppCompatActivity {
         });
     }
 
+
+    // phone number verification
     private void createNewAccount(String phoneNumber) {
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -145,25 +147,30 @@ public class ShopkeeperRegistration extends AppCompatActivity {
                         mVerificationId = verificationId;
                         mResendToken = token;
 
-                        LinearLayout layout = findViewById(R.id.registration_layout);
-                        layout.setVisibility(View.GONE);
-
-                        LinearLayout verificationLayout = findViewById(R.id.verification_layout);
-                        verificationLayout.setVisibility(View.VISIBLE);
-
-                        findViewById(R.id.verify_mobile_otp).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                EditText mCode = findViewById(R.id.verification_code);
-                                String code = mCode.getText().toString();
-
-                                if (code != null && code.length() == 6)
-                                    verifyMobile(code, mVerificationId);
-                            }
-                        });
+                        showOTPVerificationEditText();
                     }
 
                 });
+    }
+
+    private void showOTPVerificationEditText() {
+
+        LinearLayout layout = findViewById(R.id.registration_layout);
+        layout.setVisibility(View.GONE);
+
+        LinearLayout verificationLayout = findViewById(R.id.verification_layout);
+        verificationLayout.setVisibility(View.VISIBLE);
+
+        findViewById(R.id.verify_mobile_otp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText mCode = findViewById(R.id.verification_code);
+                String code = mCode.getText().toString();
+
+                if (code != null && code.length() == 6)
+                    verifyMobile(code, mVerificationId);
+            }
+        });
     }
 
     private void verifyMobile(String code, String verificationId) {

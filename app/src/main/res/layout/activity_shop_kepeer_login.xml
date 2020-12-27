@@ -18,83 +18,85 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/phone_number_id"
                 android:layout_width="267dp"
                 android:layout_height="50dp"
                 android:textAllCaps="false"
                 android:layout_gravity="center"
                 android:textAlignment="center"
-                android:textSize="25sp"
-                android:textColor="#FFFBFB"
+                android:textSize="20sp"
+                android:textColor="#D2E336"
                 android:textStyle="normal"
                 android:layout_marginTop="150dp"
-                android:hint="Username"
+                android:hint="Phonenumber"
+                android:textColorHint="#FF807A7D"
                 android:inputType="text"
-                android:maxLength="10"
-                />
-
-
-            <EditText
-                android:layout_width="267dp"
-                android:layout_height="50dp"
-                android:textAllCaps="false"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:textColor="#FFFBFB"
-                android:textStyle="normal"
-                android:layout_marginTop="50dp"
-                android:hint="Password"
-                android:inputType="numberPassword"
-                android:maxLength="10"
-                />
-
-
-            <Button
-                android:id="@+id/forgetPasswordButton_id"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="30dp"
-                android:background="#132844"
-                android:layout_marginLeft="225dp"
-                android:text="Forget password"
-                android:textAllCaps="false"
-                android:textAlignment="center"
-                android:textColor="#8B7777"
-                android:textSize="18sp"
-                android:textStyle="bold"
-
+                android:maxLength="11"
                 />
 
             <Button
                 android:id="@+id/LoginButton_id"
                 android:layout_width="110dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 android:background="@drawable/button"
-                android:text="Login"
+                android:text="Get OTP"
                 android:textAllCaps="false"
                 android:textAlignment="center"
-                android:textColor="#24D4C8"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:id="@+id/otp_verification_code_id"
+                android:layout_width="267dp"
+                android:layout_height="50dp"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="#D2E336"
+                android:textStyle="normal"
+                android:layout_marginTop="50dp"
+                android:hint="OTP Verification Code"
+                android:textColorHint="#FF807A7D"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                />
+
+
+            <Button
+                android:id="@+id/otp_verification_btn_id"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:text="Verify OTP"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
                 />
 
             <Button
                 android:id="@+id/createNewAccountButton_id"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="65dp"
-                android:layout_marginLeft="210dp"
+                android:layout_width="150dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="180dp"
                 android:background="#FFFFFF"
                 android:text="Create new account"
-                android:textAllCaps="false"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textColor="#1D1313"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textSize="15sp"
+                android:textStyle="normal" />
 
         </LinearLayout>
 

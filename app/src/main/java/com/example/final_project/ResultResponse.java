@@ -7,23 +7,33 @@ public class ResultResponse implements Parcelable {
     private String productionDate;
     private String expireDate;
     private String details;
-    private double price;
+    private String price;
+    private String name;
+    private String type;
+    private String company;
+
 
     public ResultResponse() {
     }
 
-    public ResultResponse(String productionDate, String expireDate, String details, double price) {
+    public ResultResponse(String productionDate, String expireDate, String details, String price, String name, String type, String company) {
         this.productionDate = productionDate;
         this.expireDate = expireDate;
         this.details = details;
         this.price = price;
+        this.name = name;
+        this.type = type;
+        this.company = company;
     }
 
     protected ResultResponse(Parcel in) {
         productionDate = in.readString();
         expireDate = in.readString();
         details = in.readString();
-        price = in.readDouble();
+        price = in.readString();
+        name = in.readString();
+        type = in.readString();
+        company = in.readString();
     }
 
     @Override
@@ -31,7 +41,10 @@ public class ResultResponse implements Parcelable {
         dest.writeString(productionDate);
         dest.writeString(expireDate);
         dest.writeString(details);
-        dest.writeDouble(price);
+        dest.writeString(price);
+        dest.writeString(name);
+        dest.writeString(type);
+        dest.writeString(company);
     }
 
     @Override
@@ -63,8 +76,20 @@ public class ResultResponse implements Parcelable {
         return details;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getCompany() {
+        return company;
     }
 
     @Override
@@ -73,7 +98,10 @@ public class ResultResponse implements Parcelable {
                 "productionDate='" + productionDate + '\'' +
                 ", expireDate='" + expireDate + '\'' +
                 ", details='" + details + '\'' +
-                ", price=" + price +
+                ", price='" + price + '\'' +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", company='" + company + '\'' +
                 '}';
     }
 }

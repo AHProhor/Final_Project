@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -31,9 +32,16 @@ public class CustomerVerification extends AppCompatActivity {
         decimalCodeButton = findViewById(R.id.decimalCodeButton_id);
 
         decimalCodeButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 final String decimalCode = code.getText().toString();
+
+                // checking the value is empty or null.
+                if(
+                        decimalCode==null || decimalCode.trim().isEmpty()
+                ) return;
+
                 FirebaseFirestore firestore = FirebaseFirestore.getInstance();
                 firestore.collection("medicineDecimalCodes").document(decimalCode)
                         .get()
