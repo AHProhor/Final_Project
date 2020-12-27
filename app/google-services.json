@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632116413069",
+    "project_id": "realmedicineidentification",
+    "storage_bucket": "realmedicineidentification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632116413069:android:d3096d261c6000e5fa98c4",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632116413069-e42d0vrg0d4qlabc2715i1p1tk8hqlgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3stavCFk7A2Ztybv2yGI6Hv0oTfgfEDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632116413069-e42d0vrg0d4qlabc2715i1p1tk8hqlgs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
