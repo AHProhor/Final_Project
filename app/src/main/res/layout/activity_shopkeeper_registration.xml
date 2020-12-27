@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
+
     tools:context=".ShopkeeperRegistration">
 
     <ScrollView
@@ -87,17 +88,6 @@
                 android:textColor="#8B7777"
                 android:textColorHint="#8B7777" />
 
-            <EditText
-                android:id="@+id/passwordId"
-                android:layout_width="267sp"
-                android:layout_height="38sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:hint="Password"
-                android:maxLength="10"
-                android:textAlignment="center"
-                android:textColor="#8B7777"
-                android:textColorHint="#8B7777" />
 
             <Button
                 android:id="@+id/registrationOkId"

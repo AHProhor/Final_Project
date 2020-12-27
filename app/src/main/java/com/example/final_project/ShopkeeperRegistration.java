@@ -55,7 +55,6 @@ public class ShopkeeperRegistration extends AppCompatActivity {
         ownerName = findViewById(R.id.ownerNameId);
         phoneNumber = findViewById(R.id.phoneNumberId);
         gmail = findViewById(R.id.gmailId);
-        password = findViewById(R.id.passwordId);
 
         // registration Button
         registrationOkButton = findViewById(R.id.registrationOkId);
@@ -68,14 +67,12 @@ public class ShopkeeperRegistration extends AppCompatActivity {
                 final String rownerName = ownerName.getText().toString();
                 final String rphoneNumber = phoneNumber.getText().toString();
                 final String rgmail = gmail.getText().toString();
-                final String rpassword = password.getText().toString();
 
                 if (isValid(rShopName) &&
                         isValid(rlicanseNumber) &&
                         isValid(rownerName) &&
                         isValid(rphoneNumber) &&
-                        isValid(rgmail) &&
-                        isValid(rpassword)) {
+                        isValid(rgmail)){
 
                     firebaseFirestore.collection("shops")
                             .document(rlicanseNumber)
@@ -92,8 +89,6 @@ public class ShopkeeperRegistration extends AppCompatActivity {
                                         shop.put("ownerName", rownerName);
                                         shop.put("phoneNumber", rphoneNumber);
                                         shop.put("gmail", rgmail);
-                                        shop.put("password", rpassword);
-
                                         firebaseFirestore.collection("shops")
                                                 .document(rlicanseNumber)
                                                 .set(shop);
@@ -203,6 +198,6 @@ public class ShopkeeperRegistration extends AppCompatActivity {
     }
 
     private boolean isValid(String str) {
-        return true;
+        return str != null && !str.isEmpty();
     }
 }
