@@ -10,16 +10,18 @@ public class ResultResponse implements Parcelable {
     private String price;
     private String name;
     private String type;
+    private int numberOfTimeReads = 0;
     private String company;
 
 
     public ResultResponse() {
     }
 
-    public ResultResponse(String productionDate, String expireDate, String details, String price, String name, String type, String company) {
+    public ResultResponse(String productionDate,int numberOfTimeReads, String expireDate, String details, String price, String name, String type, String company) {
         this.productionDate = productionDate;
         this.expireDate = expireDate;
         this.details = details;
+        this.numberOfTimeReads = numberOfTimeReads;
         this.price = price;
         this.name = name;
         this.type = type;
@@ -33,6 +35,7 @@ public class ResultResponse implements Parcelable {
         price = in.readString();
         name = in.readString();
         type = in.readString();
+        numberOfTimeReads = in.readInt();
         company = in.readString();
     }
 
@@ -44,6 +47,7 @@ public class ResultResponse implements Parcelable {
         dest.writeString(price);
         dest.writeString(name);
         dest.writeString(type);
+        dest.writeInt(numberOfTimeReads);
         dest.writeString(company);
     }
 
@@ -88,8 +92,16 @@ public class ResultResponse implements Parcelable {
         return type;
     }
 
+    public int getNumberOfTimeReads() {
+        return numberOfTimeReads;
+    }
+
     public String getCompany() {
         return company;
+    }
+
+    public void setNumberOfTimeReads(int numberOfTimeReads) {
+        this.numberOfTimeReads = numberOfTimeReads;
     }
 
     @Override
@@ -101,6 +113,7 @@ public class ResultResponse implements Parcelable {
                 ", price='" + price + '\'' +
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
+                ", numberOfTimeReads=" + numberOfTimeReads +
                 ", company='" + company + '\'' +
                 '}';
     }

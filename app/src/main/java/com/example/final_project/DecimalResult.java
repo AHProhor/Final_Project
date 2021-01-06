@@ -25,11 +25,11 @@ public class DecimalResult extends AppCompatActivity {
         if (result != null) {
             textView1.setText("Details : " + result.getDetails());
             textView2.setText("Production Date: " + result.getProductionDate());
-            textView.setText("Expire Date: " + result.getExpireDate());
+            textView.setText(" Expire Date: " + result.getExpireDate());
             textView3.setText("Price: "+result.getPrice());
             textView4.setText("Name: "+result.getName());
             textView5.setText("Type: "+result.getType());
-            textView6.setText("Company: "+result.getCompany());
+            textView6.setText("Company: "+result.getCompany()+"\n"+"This medicine is reads "+result.getNumberOfTimeReads()+" Times");
         }
     }
 }

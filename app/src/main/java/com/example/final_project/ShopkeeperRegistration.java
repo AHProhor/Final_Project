@@ -76,27 +76,30 @@ public class ShopkeeperRegistration extends AppCompatActivity {
 
                     firebaseFirestore.collection("shops")
                             .document(rlicanseNumber)
-                            .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                            .get()
+                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                 @Override
-                                public void onEvent(@Nullable DocumentSnapshot value,
-                                                    @Nullable FirebaseFirestoreException error
-                                ) {
-                                    if (value.getData() == null) {
-                                        Map<String, String> shop = new HashMap<>();
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if (task.isSuccessful()) {
+                                        if (task.getResult().getData() == null) {
+                                            Map<String, String> shop = new HashMap<>();
 
-                                        shop.put("ShopName", rShopName);
-                                        shop.put("licanseNumber", rlicanseNumber);
-                                        shop.put("ownerName", rownerName);
-                                        shop.put("phoneNumber", rphoneNumber);
-                                        shop.put("gmail", rgmail);
-                                        firebaseFirestore.collection("shops")
-                                                .document(rlicanseNumber)
-                                                .set(shop);
+                                            shop.put("ShopName", rShopName);
+                                            shop.put("licanseNumber", rlicanseNumber);
+                                            shop.put("ownerName", rownerName);
+                                            shop.put("phoneNumber", rphoneNumber);
+                                            shop.put("gmail", rgmail);
+                                            firebaseFirestore.collection("shops")
+                                                    .document(rlicanseNumber)
+                                                    .set(shop);
 
-                                        Toast.makeText(ShopkeeperRegistration.this, "Account created", Toast.LENGTH_SHORT).show();
-                                        createNewAccount("+88" + rphoneNumber);
-                                    } else {
-                                        Toast.makeText(ShopkeeperRegistration.this, "Account already exist", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(ShopkeeperRegistration.this, "Sending Verification Code to "+"+88" + rphoneNumber, Toast.LENGTH_SHORT).show();
+                                            createNewAccount("+88" + rphoneNumber);
+                                        } else {
+                                            Toast.makeText(ShopkeeperRegistration.this, "Account already exist", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }else{
+                                        Toast.makeText(ShopkeeperRegistration.this, "An error to create account!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -127,7 +130,7 @@ public class ShopkeeperRegistration extends AppCompatActivity {
                         // This callback is invoked in an invalid request for verification is made,
                         // for instance if the the phone number format is not valid.
                         Log.w(TAG, "onVerificationFailed", e);
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Failed to verify mobile number.", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -137,6 +140,7 @@ public class ShopkeeperRegistration extends AppCompatActivity {
                         // now need to ask the user to enter the code and then construct a credential
                         // by combining the code with a verification ID.
                         Log.d(TAG, "onCodeSent:" + verificationId);
+                        Toast.makeText(ShopkeeperRegistration.this, "Verification Code Sent!", Toast.LENGTH_SHORT).show();
 
                         // Save verification ID and resending token so we can use them later
                         mVerificationId = verificationId;
