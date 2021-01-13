@@ -35,6 +35,6 @@ dependencies {
     // FirebaseUI for Cloud Storage
     implementation 'com.firebaseui:firebase-ui-storage:7.1.1'
 
-    // bar code sncanner
+    // bar code scanner
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 }

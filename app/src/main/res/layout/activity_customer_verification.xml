@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
-        android:text="Customer Verification"
+        android:text="Medicine Verification"
         android:textColor="#F1E7E7"
         android:textSize="30sp"
         android:textStyle="bold" />
